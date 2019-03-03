@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.scss";
 import services from "./services";
+import InputComponent from "./InputComponent";
 
 class App extends Component {
   constructor() {
@@ -70,30 +71,9 @@ class App extends Component {
             <h1>Home</h1>
           </div>
           <form className="form" onSubmit={this.addAuthor} method="post">
-            <div className="control">
-              <label className="label">Nome</label>
-              <input
-                type="text"
-                value={this.state.name}
-                onChange={this.setName}
-              />
-            </div>
-            <div className="control">
-              <label className="label">E-mail</label>
-              <input
-                type="email"
-                value={this.state.email}
-                onChange={this.setEmail}
-              />
-            </div>
-            <div className="control">
-              <label className="label">Senha</label>
-              <input
-                type="password"
-                value={this.state.password}
-                onChange={this.setPassword}
-              />
-            </div>
+            <InputComponent label={"Nome"} type={"text"} value={this.state.name} onChange={this.setName}/>
+            <InputComponent label={"Email"} type={"email"} value={this.state.email} onChange={this.setEmail}/>
+            <InputComponent label={"Senha"} type={"password"} value={this.state.senha} onChange={this.setPassword}/>
             <div>
               <button className="btn" type="submit">
                 Gravar
