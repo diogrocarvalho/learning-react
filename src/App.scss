@@ -1,0 +1,51 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  background-color: #fafafa;
+  .left-menu {
+    padding: 25px 15px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #f4f4f4;
+    a {
+      padding: 5px;
+      &:hover {
+        cursor: pointer;
+        color: darkgrey;
+      }
+    }
+  }
+  .right-content {
+    width: 100%;
+    padding: 25px;
+  }
+}
+
+.form {
+  .label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  .input {
+  }
+}
+
+.table {
+  margin: 25px 0;
+  width: 100%;
+  tbody {
+    tr {
+      td {
+        border-bottom: 1px solid #ededed;
+        padding: 8px 8px 8px 0;
+      }
+    }
+  }
+  thead {
+   text-align: left;
+  }
+}
