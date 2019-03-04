@@ -1,21 +1,18 @@
 import React, { Component } from "react";
 import "./App.scss";
-import AuthorBox from "./components/authors/AuthorBox";
+import { Link } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <div className="left-menu" id="menu">
-          <a href="#top">Home</a>
-          <a href="#top">Autores</a>
-          <a href="#top">Livros</a>
+          <Link to="/">Home</Link>
+          <Link to="/authors">Autores</Link>
+          <Link to="/books">Livros</Link>
         </div>
         <div className="right-content" id="top">
-          <div className="title">
-            <h1>Home</h1>
-          </div>
-          <AuthorBox />
+          {this.props.children}
         </div>
       </div>
     );

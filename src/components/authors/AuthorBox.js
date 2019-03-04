@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Form from "./Form";
 import List from "./List";
+import Header from "../commons/Header";
 import services from "../../services";
 import PubSub from "pubsub-js";
 
@@ -33,6 +34,7 @@ export default class extends Component {
   render() {
     return (
       <div>
+        <Header title={"Autores"}/>
         <Form />
         <List authors={this.state.authors} />
       </div>
