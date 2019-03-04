@@ -25,13 +25,35 @@
 }
 
 .form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  padding: 15px;
+  width: 300px;
+
   .label {
-    display: block;
     margin-bottom: 5px;
     font-weight: 500;
   }
-  .input {
+
+  .control {
+    margin: 7px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    &.text-right {
+      width: auto;
+      align-self: end;
+    }
   }
+}
+
+hr {
+  margin: 20px;
+  border: 1px solid #ededed;
 }
 
 .table {
@@ -46,6 +68,6 @@
     }
   }
   thead {
-   text-align: left;
+    text-align: left;
   }
 }
